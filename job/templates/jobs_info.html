@@ -1,0 +1,31 @@
+{% extends "base/base.html" %} {% load static %} {% block title %}اطلاعات
+مشاغل{% endblock %} {% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/page3.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/index.css' %}" />
+
+{% endblock %} {% block content %}
+<section class="job-section">
+  <div class="container">
+    <div class="header-section">
+      <h1>آشنایی با مشاغل پرطرفدار در ایران</h1>
+      <p>روی هر شغل کلیک کنید تا اطلاعات بیشتری ببینید</p>
+    </div>
+
+    <div class="job-cards">
+      {% for job in jobs %}
+      <div class="card">
+        <img src="{{ job.image.url }}" alt="{{ job.name }}" />
+        <h3>{{ job.name }}</h3>
+        <button class="job" onclick="location.href='{{ job.link }}'">
+          مشاهده
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- <footer class="footer">
+آینده ات را بساز <div class=""></div>ما اینجاییم تا مسیر شغلی مناسب تو را روشن کنیم؛ <div class=""></div>با اطلاعات دقیق، مشاوره هوشمند و ابزارهایی که تو را یک قدم جلوتر از بقیه نگه می‌دارند.
+انتخاب درست، زندگی بهتر.
+</footer> -->
+{% endblock %}
