@@ -1,0 +1,65 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}پیشنهاد شغل هوشمند{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/page4.css' %}">
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="../assest/scripts/page4ai.js"></script>
+{% endblock %}
+
+{% block content %}
+<header>
+  <h1><i class="fas fa-briefcase"></i> پیدا کردن شغل مناسب</h1>
+  <p>با چند سوال ساده، شخصیتت رو بشناس و شغل مناسب‌تو انتخاب کن</p>
+</header>
+
+<section class="how-it-works">
+  <ol>
+    <li><strong>تست بده</strong></li>
+    <li><strong>شخصیتتو بشناس</strong></li>
+    <li><strong>شغل مناسب بگیر</strong></li>
+  </ol>
+</section>
+
+<main>
+  <form id="quiz-form">
+    <h2>تست شخصیت MBTI (۵ سوال)</h2>
+    <div class="question">1. در جمع بودن منو انرژی میده؟ <br/>
+      <label><input type="radio" name="q1" value="E"> بله</label>
+      <label><input type="radio" name="q1" value="I"> نه</label>
+    </div>
+    <div class="question">2. بیشتر به منطق توجه دارم تا احساس؟<br/>
+      <label><input type="radio" name="q2" value="T"> بله</label>
+      <label><input type="radio" name="q2" value="F"> نه</label>
+    </div>
+    <div class="question">3. برنامه‌ریزی رو به انعطاف ترجیح می‌دم؟<br/>
+      <label><input type="radio" name="q3" value="J"> بله</label>
+      <label><input type="radio" name="q3" value="P"> نه</label>
+    </div>
+    <div class="question">4. به جزئیات بیشتر توجه می‌کنم تا کلیات؟<br/>
+      <label><input type="radio" name="q4" value="S"> بله</label>
+      <label><input type="radio" name="q4" value="N"> نه</label>
+    </div>
+    <div class="question">5. ترجیح می‌دم فقط یک کارو کامل انجام بدم<br/>
+      <label><input type="radio" name="q5" value="J"> بله</label>
+      <label><input type="radio" name="q5" value="P"> نه</label>
+    </div>
+
+    <h2>علاقه‌مندی‌ها</h2>
+    <input type="text" id="interest" placeholder="مثلاً هنر، کدنویسی..." required>
+    <input type="text" id="env" placeholder="محیط کاری مورد علاقه: تیمی، رسمی، آزاد..." required>
+    <input type="text" id="goal" placeholder="هدفت از کار چیه؟" required>
+    <button type="submit"><i class="fas fa-search"></i> پیشنهاد شغل</button>
+  </form>
+
+  <section id="result"></section>
+</main>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'scripts/page4.js' %}"></script>
+{% endblock %}

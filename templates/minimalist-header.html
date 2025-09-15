@@ -1,0 +1,28 @@
+<header class="header">
+  <nav class="boxbar">
+    <div class="bar">
+      <a class="menu_item" href="{% url 'personality_test' %}">تست شخصیت</a>
+      <a class="menu_item" href="{% url 'jobs-info:jobs-info' %}">اطلاعات شغلی</a>
+      <a class="menu_item" href="{% url 'find_job' %}">یافتن شغل</a>
+      <a class="menu_item" href="{% url 'resume_maker' %}">رزومه</a>
+      <a class="menu_item" href="{% url 'articles:articles' %}">مقالات رزومه</a>
+      {% if request.user.is_authenticated %}
+      <form action="{% url 'logout' %}" method="post" style="display: inline">
+        {% csrf_token %}
+        <button type="submit" class="menu_item">
+          خروج از حساب کاربری
+        </button>
+      </form>
+      {% endif %}
+    </div>
+    <div class="auth-section">
+      {% if request.user.is_authenticated %}
+      <span style="color: var(--text-primary); font-weight: 500;">
+        سلام {{ request.user.username }}
+      </span>
+      {% else %}
+      <a class="contant" href="{% url 'login' %}">ورود</a>
+      {% endif %}
+    </div>
+  </nav>
+</header>

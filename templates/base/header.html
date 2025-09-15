@@ -1,0 +1,44 @@
+<header class="header">
+  <nav class="boxbar">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="bar" id="nav-menu">
+      <li class="menu_link"><a class="menu_item" href="{% url 'personality_test' %}">تست شخصیت</a></li>
+      <li class="menu_link"><a class="menu_item" href="{% url 'jobs-info:jobs-info' %}">اطلاعات شغلی</a></li>
+      <li class="menu_link"><a class="menu_item" href="{% url 'find_job' %}">یافتن شغل</a></li>
+      <li class="menu_link"><a class="menu_item" href="{% url 'resume_maker' %}">رزومه</a></li>
+      <li class="menu_link"><a class="menu_item" href="{% url 'articles:articles' %}">مقالات رزومه</a></li>
+      {% if request.user.is_authenticated %}
+      <li class="menu_link">
+        <form action="{% url 'logout' %}" method="post" class="logout-form">
+          {% csrf_token %}
+          <button type="submit" class="menu_item logout-btn">خروج</button>
+        </form>
+      </li>
+      {% endif %}
+    </ul>
+
+    <div class="user-info">
+      {% if request.user.is_authenticated %}
+        <h3 class="username">سلام {{ request.user.username }}</h3>
+      {% else %}
+        <a class="contant" href="{% url 'login' %}">ورود</a>
+      {% endif %}
+    </div>
+  </nav>
+</header>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('open');
+  });
+</script>

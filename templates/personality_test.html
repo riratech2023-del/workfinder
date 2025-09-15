@@ -1,0 +1,30 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}تست شخصیت شغلی هالند{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/page2.css' %}">
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<header>
+  <h1><i class="fas fa-briefcase icon"></i> تست شخصیت شغلی هالند</h1>
+</header>
+<main class="container">
+  <form id="quiz-form">
+    <div id="questions"></div>
+    <button type="submit"><i class="fas fa-check-circle icon submitButton"></i> مشاهده نتیجه</button>
+  </form>
+</main>
+<footer>
+  طراحی شده با عشق | تست هالند شغلی
+</footer>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'scripts/page3.js' %}"></script>
+{% endblock %}

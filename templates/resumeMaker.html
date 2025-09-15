@@ -1,0 +1,93 @@
+{% extends "base/base.html" %} {% load static %} {% block title %}سایت کاریابی |
+رزومه‌ساز{% endblock %} {% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/page5.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/index.css' %}" />
+<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+{% endblock %} {% block content %}
+<header class="site-header">
+  <h1>رزومه‌ساز هوشمند</h1>
+  <p class="tips-title">چطور یک رزومه حرفه‌ای بنویسیم؟</p>
+  <ul class="tips-list">
+    <li>رزومه‌ات رو ساده، خوانا و حرفه‌ای نگه دار</li>
+    <li>فقط مهم‌ترین و مرتبط‌ترین اطلاعات رو وارد کن</li>
+    <li>از افعال قدرتمند استفاده کن مثل «مدیریت کردم»، «طراحی کردم»</li>
+    <li>مهارت‌ها و دستاوردهای قابل اندازه‌گیری رو بنویس</li>
+    <li>اطلاعات تماس معتبر و لینک نمونه‌کار رو فراموش نکن</li>
+  </ul>
+</header>
+<main class="main-content">
+  <section class="steps-section">
+    <h2>چطور کار می‌کنه؟</h2>
+    <div class="steps">
+      <div class="step">
+        <img
+          src="https://img.icons8.com/color/96/test-passed.png"
+          alt="Test Icon"
+        />
+        <p>انجام تست</p>
+      </div>
+
+      <div class="step">
+        <img
+          src="https://img.icons8.com/color/96/person-female.png"
+          alt="Personality Icon"
+        />
+        <p>شناخت تیپ شخصیتی</p>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/job.png" alt="Job Icon" />
+        <p>مشاهده فرصت‌های شغلی</p>
+      </div>
+    </div>
+  </section>
+  <section class="resume-form">
+    <h2>اطلاعات رزومه خود را وارد کنید</h2>
+    <form id="resumeForm">
+      <label>نام کامل:<input type="text" name="fullname" required /></label>
+      <label>شماره تماس:<input type="tel" name="phone" required /></label>
+      <label>ایمیل:<input type="email" name="email" required /></label>
+      <label
+        >تحصیلات:<textarea name="education" rows="3" required></textarea>
+      </label>
+      <label
+        >سابقه کاری:<textarea name="experience" rows="3" required></textarea>
+      </label>
+      <label
+        >مهارت‌ها:<textarea name="skills" rows="2" required></textarea>
+      </label>
+      <label>نمونه‌کارها:<textarea name="portfolio" rows="2"></textarea></label>
+      <label
+        >دوره‌ها و مدارک:<textarea name="certificates" rows="2"></textarea>
+      </label>
+      <button class="btn" type="submit">ساخت رزومه</button>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <h3>رزومه‌های الهام‌بخش</h3>
+  <div class="featured-cvs">
+    <a
+      href="https://fa.wikipedia.org/wiki/ایلان_ماسک"
+      target="_blank"
+      class="cv-card"
+      >رزومه‌ی ایلان ماسک</a
+    >
+    <a
+      href="https://fa.wikipedia.org/wiki/استیو_جابز"
+      target="_blank"
+      class="cv-card"
+      >رزومه‌ی استیو جابز</a
+    >
+    <a
+      href="https://fa.wikipedia.org/wiki/مریم_میرزاخانی"
+      target="_blank"
+      class="cv-card"
+      >رزومه‌ی مریم میرزاخانی</a
+    >
+  </div>
+</footer>
+{% endblock %} {% block extra_js %}
+<script src="{% static 'scripts/page5.js' %}"></script>
+{% endblock %}

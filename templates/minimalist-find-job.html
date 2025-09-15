@@ -1,0 +1,129 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}یافتن شغل{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/minimalist-main.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+  <div class="container">
+    <div class="top">
+      <div class="explore">
+        <h1 class="top_title">نسل جدیدی از سایت‌های کاریابی برای آینده‌ی شغلی شما</h1>
+        <p class="top_paragraf">
+          پلتفرمی متفاوت برای یافتن شغل دلخواه شما. از تست شخصیت تا ساخت رزومه و مشاهده آگهی‌ها، همه در یکجا.
+        </p>
+        <div class="button_top">
+          <a href="#" class="left">شروع کنید</a>
+          <a href="#" class="right">بیشتر بدانید</a>
+        </div>
+      </div>
+      <img class="img2" src="{% static 'image/20250408_115623.png' %}" alt="تصویر شغلی">
+    </div>
+  </div>
+</div>
+
+<div class="between_explore">
+  <div class="container">
+    <p class="work_title">نحوه کار</p>
+    <h2 class="top_title1">سه مرحله ساده برای شروع مسیر شغلی</h2>
+    <div class="work_content">
+      <div class="paragraph">
+        <h3 class="title_paragraph">تحقیق درباره مشاغل</h3>
+        <p class="first_paragraph">تحلیل فرصت‌های شغلی با توجه به شخصیت و مهارت‌های شما</p>
+      </div>
+      <div class="paragraph">
+        <h3 class="title_paragraph">هدف‌گذاری شغلی</h3>
+        <p class="first_paragraph">شناسایی مسیر شغلی مناسب با ابزارهای هوشمند ما</p>
+      </div>
+      <div class="paragraph">
+        <h3 class="title_paragraph">نتایج حرفه‌ای</h3>
+        <p class="first_paragraph">دستیابی به موقعیت شغلی دلخواهتان در کمترین زمان ممکن</p>
+      </div>
+    </div>
+    <img class="img3" src="{% static 'image/20250422_111221.png' %}" alt="تصویر فرآیند">
+  </div>
+</div>
+
+<div class="person_comment">
+  <div class="container">
+    <h2 class="title_person_comment">نظر برخی از کاربران این سایت</h2>
+    <p class="explain_person_comment">
+      هزاران نفر با استفاده از این سیستم مسیر شغلی جدیدی یافته‌اند.
+    </p>
+    <div class="comments">
+      <div class="comment">
+        <p class="comment_text">
+          فهمیدم که رهبر ذاتی هستم و اکنون در یک نقش مدیریتی موفقم!
+        </p>
+        <div class="comment_info">
+          <img class="comment_img" src="{% static 'image/Person 3.png' %}" alt="آرمان رضایی">
+          <p class="person">آرمان رضایی، مدیر استودیو</p>
+        </div>
+      </div>
+      <div class="comment">
+        <p class="comment_text">
+          این سایت باعث شد مسیر شغلیم رو بازتعریف کنم و در کاری مشغول شم که عاشقشم!
+        </p>
+        <div class="comment_info">
+          <img class="comment_img" src="{% static 'image/Person 2.png' %}" alt="سامیار موسوی">
+          <p class="person">سامیار موسوی، مشاور خلاق</p>
+        </div>
+      </div>
+      <div class="comment">
+        <p class="comment_text">
+          از تست شخصیت تا یافتن شغل، همه چیز سریع و حرفه‌ای انجام شد. ممنون از تیم فوق‌العاده‌تون!
+        </p>
+        <div class="comment_info">
+          <img class="comment_img" src="{% static 'image/Person 1.png' %}" alt="سارا کریمی">
+          <p class="person">سارا کریمی، توسعه‌دهنده فرانت‌اند</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>درباره ما</h3>
+        <p>پلتفرم پیشرفته کاریابی که به شما کمک می‌کند شغل ایده‌آل خود را پیدا کنید.</p>
+      </div>
+      <div class="footer-section">
+        <h3>خدمات</h3>
+        <p><a href="#">تست شخصیت</a></p>
+        <p><a href="#">ساخت رزومه</a></p>
+        <p><a href="#">مشاوره شغلی</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>عضویت در خبرنامه</h3>
+        <p>از آخرین فرصت‌های شغلی باخبر شوید</p>
+        <div class="form-container">
+          <input type="email" class="input" placeholder="ایمیل شما">
+          <button class="button">عضویت</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  function handleFindJobs() {
+    const result = localStorage.getItem("result");
+    if (result) {
+      window.location.href = "PersonalityTest_result.html";
+    } else {
+      alert("لطفاً ابتدا تست شخصیت را انجام دهید.");
+    }
+  }
+</script>
+{% endblock %}

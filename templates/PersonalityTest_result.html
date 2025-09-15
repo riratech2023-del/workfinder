@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}نتیجه تست شخصیت شغلی هالند{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/page2_1.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<header>
+  <i class="fas fa-user-check icon"></i> نتیجه تست شخصیت شغلی شما
+</header>
+<div class="result-container">
+  <div id="result-box" class="type-box"></div>
+  <div class="knowledge-box">
+    <strong>آیا می‌دانستید؟</strong><br>
+    تست هالند یکی از معتبرترین روش‌ها برای شناخت تیپ شخصیتی شماست و به شما کمک می‌کند مسیر شغلی‌تان را آگاهانه‌تر انتخاب کنید.
+  </div>
+  <div id="job-list" class="job-list"></div>
+  <a id="save-and-go" href="../myproject/index.html" class="btn-back">
+    <i class="fas fa-redo icon"></i> بازگشت به خانه
+  </a>
+</div>
+<footer>
+  طراحی شده با عشق | بر اساس نظریه شخصیت هالند
+</footer>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'scripts/page3_1.js' %}"></script>
+{% endblock %}

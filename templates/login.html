@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ثبت‌نام</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Iran Sans Font -->
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Iranian%20Sans/IranianSans.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2><i class="fas fa-user-plus"></i> ثبت‌نام در سایت</h2>
+    <div class="input-group">
+      <input type="text" id="username" placeholder="نام کاربری">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="رمز عبور">
+      <i class="fas fa-lock"></i>
+    </div>
+    <button id="login-signup-btn">ورود / ثبت‌نام</button>
+    <div class="success" id="message"></div>
+    <div class="count" id="count">تعداد کاربران ثبت‌نام‌شده: {{ count }}</div>
+    <a href="{% url 'index' %}" class="back-btn"><i class="fas fa-home"></i> بازگشت به خانه</a>
+  </div>
+
+  <script src="{% static 'scripts/login.js' %}"></script>
+</body>
+</html>
