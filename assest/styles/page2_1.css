@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: #0d2c32;
+  color: #f3e8d3;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  direction: rtl;
+}
+
+header {
+  background-color: #133c43;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.icon {
+  margin-left: 8px;
+  color: #f2b950;
+}
+
+.result-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.type-box {
+  background: #1d4a4f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.knowledge-box {
+  background: #174146;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #ffe5b4;
+}
+
+.job-list {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.job-card {
+  background-color: #133c43;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: right;
+  color: #fff7e6;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #f2b950;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-back:hover {
+  background-color: #ffd873;
+}
+
+footer {
+  margin-top: 3rem;
+  background-color: #133c43;
+  color: #ccc;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

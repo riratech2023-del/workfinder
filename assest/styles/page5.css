@@ -1,0 +1,239 @@
+/* --------------------
+   Fonts & Base
+-------------------- */
+@font-face {
+  font-family: "iransans-r";
+  src: url("../fonts/IRANSansX-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iransans-b";
+  src: url("../fonts/IRANSansX-Bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "iransans-r", sans-serif;
+  font-size: 18px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f4f4f4;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* --------------------
+   Header
+-------------------- */
+.site-header {
+  background: linear-gradient(135deg, #102a30, #17434d);
+  color: #e6c486;
+  padding: 50px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+}
+
+.site-header h1 {
+  font-size: 60px;
+  font-family: "iransans-b";
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+.tips-title {
+  font-size: 28px;
+  margin-top: 15px;
+  color: #ffd28c;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeInUp 1.2s ease;
+  line-height: 20px;
+}
+
+.tips-list li::before {
+  content: "✔ ";
+  color: #ffb84c;
+  font-weight: bold;
+}
+
+/* --------------------
+   Steps Section
+-------------------- */
+.steps-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #122e33, #1e4c53);
+  text-align: center;
+}
+
+.steps-section h2 {
+  color: #ffd28c;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.step {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 16px;
+  width: 200px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.step:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.step img {
+  width: 70px;
+  margin-bottom: 12px;
+}
+
+.step p {
+  color: #ffd28c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* --------------------
+   Resume Form
+-------------------- */
+.resume-form {
+  background: rgba(255,255,255,0.07);
+  padding: 50px 30px;
+  max-width: 900px;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  backdrop-filter: blur(15px);
+  animation: fadeInUp 1.3s ease;
+}
+
+.resume-form h2 {
+  color: #ffd28c;
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.resume-form label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: right;
+  font-weight: bold;
+  color: #e4cfa9;
+}
+
+.resume-form input,
+.resume-form textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 8px;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.resume-form input:focus,
+.resume-form textarea:focus {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px #ffb84c;
+}
+
+.resume-form button {
+  display: block;
+  margin: 25px auto 0;
+  background: linear-gradient(135deg, #ff6e40, #ffb84c);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-form button:hover {
+  background: linear-gradient(135deg, #ffb84c, #ff6e40);
+  transform: scale(1.07);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* --------------------
+   Footer
+-------------------- */
+.site-footer {
+  background: linear-gradient(135deg, #102a30, #17434d);
+  color: #e4cfa9;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.site-footer h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffd28c;
+}
+
+.featured-cvs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.cv-card {
+  background: rgba(255,255,255,0.08);
+  padding: 18px 24px;
+  border-radius: 12px;
+  color: #ffd28c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cv-card:hover {
+  background: linear-gradient(135deg, #ffb84c, #ff6e40);
+  color: #fff;
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* --------------------
+   Animations
+-------------------- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
