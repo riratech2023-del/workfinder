@@ -1,0 +1,78 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}رزومه مقاله | Article Resume{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/page6.css' %}">
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>از بهترین‌ها یاد بگیر!</h1>
+    <p>با خواندن مقالات الهام‌بخش، مسیر حرفه‌ای خود را بهتر بساز</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <h2>چطور کار می‌کنه؟</h2>
+  <div class="steps">
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/512/3993/3993709.png" alt="خواندن مقالات"/>
+      <h3>۱. بخوان</h3>
+      <p>مقالات افراد موفق را مرور کن</p>
+    </div>
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png" alt="یادگیری"/>
+      <h3>۲. یاد بگیر</h3>
+      <p>رازهای موفقیت آن‌ها را درک کن</p>
+    </div>
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="ساخت رزومه"/>
+      <h3>۳. بساز</h3>
+      <p>رزومه حرفه‌ای خودت را خلق کن</p>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES SECTION -->
+<section class="articles">
+  <h2>مقالات الهام‌بخش</h2>
+  <div id="articlesList" class="articles-container">
+    <!-- مقالات با جاوااسکریپت لود می‌شن -->
+    <section class="hero">
+      <h1>چطور رزومه‌ای الهام‌بخش بسازیم؟</h1>
+      <p>با استفاده از تجربه‌ی نویسندگان و مقالات موفق</p>
+    </section>
+
+    <section class="steps">
+      <div class="step">
+        <div class="number">1</div>
+        <p>مطالعه رزومه افراد موفق</p>
+      </div>
+      <div class="step">
+        <div class="number">2</div>
+        <p>شناخت مسیر شغلی و شخصیتی</p>
+      </div>
+      <div class="step">
+        <div class="number">3</div>
+        <p>الهام از مقالات و ساخت رزومه</p>
+      </div>
+    </section>
+
+      {% for article in articles %}
+          <div class="article-card">
+                  <h3>{{ article.name }}</h3>
+                  <p>تاریخ: {{ article.date }}</p>
+                  <a href="{{ article.link.url }}">مشاهده مقاله</a>
+          </div>
+      {% endfor %}
+  </div>
+
+</section>
+
+{% endblock %}
